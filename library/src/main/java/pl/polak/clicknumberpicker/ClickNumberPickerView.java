@@ -70,7 +70,7 @@ public class ClickNumberPickerView extends PercentRelativeLayout {
 
     private ClickNumberPickerListener clickNumberPickerListener = new ClickNumberPickerListener() {
         @Override
-        public void onValueChange(float previousValue, float currentValue, PickerClickType pickerClickType) {}
+        public void onValueChange(float previousValue, float currentValue, PickerClickType pickerClickType, ClickNumberPickerView pickerView) {}
     };
 
     private ObjectAnimator leftPickerTranslationXAnimator;
@@ -331,7 +331,7 @@ public class ClickNumberPickerView extends PercentRelativeLayout {
             return;
         }
 
-        clickNumberPickerListener.onValueChange(this.value, value, this.value > value ? PickerClickType.LEFT : PickerClickType.RIGHT);
+        clickNumberPickerListener.onValueChange(this.value, value, this.value > value ? PickerClickType.LEFT : PickerClickType.RIGHT, this);
 
         this.value = value;
         tvValue.setText(formatValue(this.value));

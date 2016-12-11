@@ -11,6 +11,6 @@ public interface ClickNumberPickerListener {
      * @param currentValue of the picker
      * @param pickerClickType tells if value was increased on decreased
      */
-    void onValueChange(float previousValue, float currentValue, PickerClickType pickerClickType);
+    void onValueChange(float previousValue, float currentValue, PickerClickType pickerClickType, ClickNumberPickerView pickerView);
 
 }
